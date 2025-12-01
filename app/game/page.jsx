@@ -2,9 +2,9 @@
 'use client'
 
 import { useState } from 'react'
-import Navbar from '@/components/Navbar'
-import LoveGame from '@/components/LoveGame'
-import LoveMessage from '@/components/LoveMessage'
+import Navbar from '../../components/Navbar'
+import LoveGame from '../../components/LoveGame'
+import LoveMessage from '../../components/LoveMessage'
 
 export default function GamePage() {
   const [showMessage, setShowMessage] = useState(false)
@@ -40,4 +40,3 @@ export default function GamePage() {
     </div>
   )
 }
-
