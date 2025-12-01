@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-pink-100 via-purple-100 to-red-100;
+    overflow-x: hidden;
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(calc(-50% + 5px)) translateY(-25vh) rotate(2deg);
+  }
+  50% {
+    transform: translateX(calc(-50% - 5px)) translateY(-50vh) rotate(-2deg);
+  }
+  75% {
+    transform: translateX(calc(-50% + 5px)) translateY(-75vh) rotate(2deg);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-100vh) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+.heart-float {
+  animation: floatUp 10s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-20px) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-60px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-80px) scale(0.9);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.6s ease-out forwards;
+}
